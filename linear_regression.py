@@ -6,9 +6,9 @@ class LinearRegression:
     	pass
 
     def fit(self, X, y):
-        self.X = X
-        self.y = y
+        self.X = np.asarray(X)
+        self.y = np.asarray(y)
 
     def predict(self, X):
-        theta = np.linalg.inv(X.T @ X) @ X.T @ y
-        return [theta @ x for x in X]
+        theta = np.linalg.inv(self.X.T.dot(self.X)).dot(self.X.T).dot(self.y)
+        return [theta.dot(x) for x in X]
