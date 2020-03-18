@@ -1,12 +1,6 @@
 import numpy as np
 from collections import Counter
-
-
-def euclidean_distance(x1, x2):
-    for x in [x1, x2]:
-        if not isinstance(x, np.ndarray):
-            x = np.asaray(x)
-    return np.sqrt(np.sum((x1 - x2)**2))
+from mlfromscratch.utils.ops import euclidean_distance
 
 
 class KNN:

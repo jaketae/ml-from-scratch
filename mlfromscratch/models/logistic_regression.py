@@ -1,5 +1,5 @@
 import numpy as np
-from mlfromscratch.utils.activation_functions import sigmoid
+from mlfromscratch.utils.activation import sigmoid
 
 class LogisticRegression:
 
