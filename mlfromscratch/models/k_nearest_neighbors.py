@@ -16,12 +16,12 @@ class KNN:
         self.X = X
 
     def predict(self, X):
-        y_pred = [self._predict(x) for x in X]
-        return np.asarray(y_pred)
+        return [self._predict(x) for x in X]
+        
 
     def _predict(self, x):
         distances = [euclidean_distance(x, data) for data in self.X]
         k_idx = np.argsort(distances)[:self.k]
-        k_neighbor_labels = y[k_idx]
+        k_neighbor_labels = self.y[k_idx]
         most_common = Counter(k_neighbor_labels).most_common(1)[0][0]
         return most_common
