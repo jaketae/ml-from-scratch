@@ -2,7 +2,7 @@ import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from models.logistic_regression import LogisticRegression
+from mlfromscratch.models.logistic_regression import LogisticRegression
 
 X, y = datasets.load_breast_cancer(return_X_y=True)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)

@@ -10,5 +10,5 @@ class LinearRegression:
         self.y = np.asarray(y)
 
     def predict(self, X):
-        theta = np.linalg.inv(self.X.T.dot(self.X)).dot(self.X.T).dot(self.y)
-        return [theta.dot(x) for x in X]
+        weight = np.dot(np.dot(np.linalg.inv(np.dot(self.X.T, self.X)), self.X.T), self.y)
+        return [np.dot(weight, x) for x in X]
