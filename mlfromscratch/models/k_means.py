@@ -49,15 +49,3 @@ class KMeans():
 		for i, cluster in enumerate(clusters):
 			labels[cluster] = i
 		return labels
-
-
-
-		
-
-
-
-
-
-
-
-
