@@ -3,7 +3,7 @@ from collections import Counter
 from mlfromscratch.utils.ops import euclidean_distance
 
 
-class KNN():
+class KNN:
 
     def __init__(self, k=5):
         self.k = k

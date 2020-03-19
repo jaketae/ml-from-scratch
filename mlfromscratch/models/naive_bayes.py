@@ -2,7 +2,7 @@ import numpy as np
 from collections import defaultdict
 
 
-class NaiveBayes():
+class NaiveBayes:
 
 	def __init__(self):
 		pass
