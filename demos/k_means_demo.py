@@ -1,14 +1,21 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from mlfromscratch.utils.load import cls_data
-from mlfromscratch.utils.ops import accuracy_score
 from mlfromscratch.models.k_means import KMeans
 
 
 def main():
 	X, y = cls_data()
-	cls = KMeans(k=3, n_iters=1000)
+	cls = KMeans(k=len(np.unique(y)), n_iters=100)
 	y_pred = cls.predict(X)
-	print("Accuracy: {}".format(accuracy_score(y, y_pred)))
+
+	fig, (ax1, ax2) = plt.subplots(1, 2, sharex=True, sharey=True)
+	ax1.set_title("True Cluster")
+	ax1.scatter(X[:,0], X[:,1], c=y)
+	ax2.set_title("Predicted Cluster")
+	ax2.scatter(X[:,0], X[:,1], c=y_pred)
+	plt.show()
+
 
 if __name__ == '__main__':
 	main()

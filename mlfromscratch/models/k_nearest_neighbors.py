@@ -9,11 +9,7 @@ class KNN():
         self.k = k
 
     def fit(self, X, y):
-        if not isinstance(y, np.ndarray):
-            self.y = np.asarray(y)
-        else:
-            self.y = y
-        self.X = X
+        self.X, self.y = np.asarray(X), np.asarray(y)
 
     def predict(self, X):
         return [self._predict(x) for x in X]

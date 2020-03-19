@@ -15,8 +15,8 @@ class LogisticRegression():
         self.bias = 0
 
     def fit(self, X, y):
-        self._init_weights(X)
         X, y = np.asarray(X), np.asarray(y)
+        self._init_weights(self.X)
 
         for _ in range(self.n_iters):
             y_predicted = sigmoid(np.dot(X, self.weights) + self.bias)
