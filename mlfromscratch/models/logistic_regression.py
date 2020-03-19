@@ -1,7 +1,7 @@
 import numpy as np
 from mlfromscratch.utils.activation import sigmoid
 
-class LogisticRegression:
+class LogisticRegression():
 
     def __init__(self, learning_rate, n_iters):
         self.weights = None

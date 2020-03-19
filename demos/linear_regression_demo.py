@@ -8,7 +8,7 @@ def main():
 	reg = LinearRegression()
 	reg.fit(X_train, y_train)
 	y_pred = reg.predict(X_test)
-	print("True Coefficient: {0}\nPredicted Coefficient: {1}".format(coef, regressor.weight))
+	print("True Coefficient: {0}\nPredicted Coefficient: {1}".format(coef, reg.weight))
 
 if __name__ == '__main__':
 	main()

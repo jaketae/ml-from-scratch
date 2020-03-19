@@ -8,9 +8,9 @@ def softmax(x):
     return e_x / np.sum(e_x, axis=-1, keepdims=True)
 
 
-def tanh():
+def tanh(x):
     return 2 / (1 + np.exp(-2*x)) - 1
 
 
-def relu():
+def relu(x):
     return np.where(x >= 0, x, 0)
