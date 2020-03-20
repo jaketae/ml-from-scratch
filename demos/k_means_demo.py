@@ -4,9 +4,9 @@ from mlfromscratch.utils.load import cls_data
 from mlfromscratch.models.k_means import KMeans
 
 
-def main():
-	X, y = cls_data()
-	cls = KMeans(k=len(np.unique(y)), n_iters=100)
+def main(centers=3):
+	X, y = cls_data(centers=centers)
+	cls = KMeans(k=centers, n_iters=100)
 	y_pred = cls.predict(X)
 
 	fig, (ax1, ax2) = plt.subplots(1, 2, sharex=True, sharey=True)

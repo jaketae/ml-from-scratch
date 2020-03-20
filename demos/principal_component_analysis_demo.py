@@ -4,9 +4,9 @@ from mlfromscratch.utils.load import cls_data
 from mlfromscratch.models.principal_component_analysis import PCA
 
 
-def main():
-	X, y = cls_data(n_features=4, centers=2)
-	cls = PCA(2)
+def main(dims=2):
+	X, y = cls_data(n_features=4, centers=dims)
+	cls = PCA(dims)
 	cls.fit(X)
 	X_transformed = cls.transform(X)
 
