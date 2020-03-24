@@ -13,7 +13,7 @@ class KNN:
 
     def predict(self, X):
         return [self._predict(x) for x in X]
-        
+
     def _predict(self, x):
         distances = [euclidean_distance(x, data) for data in self.X]
         k_idx = np.argsort(distances)[:self.k]
