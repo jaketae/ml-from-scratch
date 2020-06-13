@@ -1,9 +1,9 @@
-import numpy as np
 from collections import defaultdict
+
+import numpy as np
 
 
 class NaiveBayes:
-
     def __init__(self):
         pass
 
@@ -33,4 +33,4 @@ class NaiveBayes:
 
     def _calculate_likelihood(self, c, x):
         mean, var = self.parameters[c]
-        return np.exp(- (x - mean)**2 / (2 * var)) / np.sqrt(2 * np.pi * var)
+        return np.exp(-((x - mean) ** 2) / (2 * var)) / np.sqrt(2 * np.pi * var)

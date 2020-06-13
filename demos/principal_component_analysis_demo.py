@@ -1,7 +1,7 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from mlfromscratch.utils.load import cls_data
+import numpy as np
 from mlfromscratch.models.principal_component_analysis import PCA
+from mlfromscratch.utils.load import cls_data
 
 
 def main(dims=2):
@@ -10,13 +10,11 @@ def main(dims=2):
     cls.fit(X)
     X_transformed = cls.transform(X)
 
-    plt.scatter(X_transformed[:, 0],
-                X_transformed[:, 1],
-                c=y)
-    plt.xlabel('PC 1')
-    plt.ylabel('PC 2')
+    plt.scatter(X_transformed[:, 0], X_transformed[:, 1], c=y)
+    plt.xlabel("PC 1")
+    plt.ylabel("PC 2")
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,7 +1,7 @@
 import numpy as np
+from mlfromscratch.models.logistic_regression import LogisticRegression
 from mlfromscratch.utils.load import clf_data
 from mlfromscratch.utils.ops import accuracy_score
-from mlfromscratch.models.logistic_regression import LogisticRegression
 
 
 def main():
@@ -12,5 +12,5 @@ def main():
     print("Accuracy: {}".format(accuracy_score(y_test, y_pred)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

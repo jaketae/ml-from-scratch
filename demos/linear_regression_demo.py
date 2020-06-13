@@ -1,6 +1,6 @@
 import numpy as np
-from mlfromscratch.utils.load import reg_data
 from mlfromscratch.models.linear_regression import LinearRegression
+from mlfromscratch.utils.load import reg_data
 
 
 def main():
@@ -8,9 +8,8 @@ def main():
     reg = LinearRegression()
     reg.fit(X_train, y_train)
     y_pred = reg.predict(X_test)
-    print("True Coefficient: {0}\nPredicted Coefficient: {1}".format(
-        coef, reg.weight))
+    print("True Coefficient: {0}\nPredicted Coefficient: {1}".format(coef, reg.weight))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

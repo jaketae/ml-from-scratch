@@ -3,7 +3,6 @@ from mlfromscratch.utils.ops import euclidean_distance
 
 
 class KMeans:
-
     def __init__(self, k, n_iters):
         self.k = k
         self.n_iters = n_iters

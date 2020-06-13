@@ -3,7 +3,6 @@ from mlfromscratch.utils.activation import sigmoid
 
 
 class LogisticRegression:
-
     def __init__(self, learning_rate, n_iters):
         self.weights = None
         self.bias = None

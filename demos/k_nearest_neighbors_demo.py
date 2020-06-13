@@ -1,7 +1,7 @@
 import numpy as np
+from mlfromscratch.models.k_nearest_neighbors import KNN
 from mlfromscratch.utils.load import clf_data
 from mlfromscratch.utils.ops import accuracy_score
-from mlfromscratch.models.k_nearest_neighbors import KNN
 
 
 def main():
@@ -12,5 +12,5 @@ def main():
     print("Accuracy: {}".format(accuracy_score(y_test, y_pred)))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

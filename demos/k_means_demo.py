@@ -1,7 +1,7 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from mlfromscratch.utils.load import cls_data
+import numpy as np
 from mlfromscratch.models.k_means import KMeans
+from mlfromscratch.utils.load import cls_data
 
 
 def main(centers=3):
@@ -17,5 +17,5 @@ def main(centers=3):
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
